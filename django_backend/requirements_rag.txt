@@ -1,0 +1,13 @@
+# 高级 RAG 系统所需依赖
+
+# BM25 算法
+rank-bm25>=0.2.2
+
+# 可选：交叉编码器重排序（需要较大内存）
+# sentence-transformers>=2.2.0
+
+# 已有的依赖（确保版本兼容）
+# llama-index
+# chromadb
+# pandas
+

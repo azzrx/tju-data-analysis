@@ -1,0 +1,29 @@
+# Django 核心依赖
+Django>=4.0
+django-ninja>=0.22.0
+django-cors-headers>=3.13.0
+
+# DeepSeek API 依赖
+requests>=2.28.0
+
+# LLama Index 核心（用于 RAG 系统）
+llama-index>=0.9.0
+llama-index-llms-ollama>=0.1.0
+llama-index-embeddings-ollama>=0.1.0
+llama-index-vector-stores-chroma>=0.1.0
+
+# 向量数据库
+chromadb>=0.4.0
+
+# 数据处理
+pandas>=2.0.0
+
+# LangChain（用于 Prompt 模板）
+langchain-core>=0.1.0
+
+# 高级 RAG 系统依赖
+rank-bm25>=0.2.2
+
+# 可选：交叉编码器重排序（需要较大内存，不强制安装）
+# sentence-transformers>=2.2.0
+

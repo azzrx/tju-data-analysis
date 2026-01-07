@@ -1,0 +1,213 @@
+/* 浅色主题（默认） */
+:root[data-theme="light"], :root {
+  --primary-color: #4f46e5;
+  --primary-light: #6366f1;
+  --primary-dark: #4338ca;
+  --secondary-color: #10b981;
+  --bg-color: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --card-bg: #ffffff;
+  --text-color: #1e293b;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+  --user-message: #e0e7ff;
+  --bot-message: #f1f5f9;
+  --danger-color: #ef4444;
+  --hover-color: #f1f5f9;
+  --input-bg: #ffffff;
+  --input-border: #e2e8f0;
+  --input-focus-border: #4f46e5;
+  --input-text: #1e293b;
+  --input-placeholder: #94a3b8;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --radius: 8px;
+  
+  /* 输入框专用颜色 */
+  --input-box-bg: #ffffff;
+  --input-box-border: #e2e8f0;
+  --input-box-focus-border: #4f46e5;
+  
+  /* 代码块颜色 */
+  --code-bg: rgba(175, 184, 193, 0.2);
+  --code-color: #e01e5a;
+  --code-block-bg: #f6f8fa;
+  --code-block-color: #24292e;
+}
+
+/* 深色主题 - 专业配色方案 */
+:root[data-theme="dark"] {
+  /* 主色调 - 使用专业的蓝色系 */
+  --primary-color: #3b82f6;
+  --primary-light: #60a5fa;
+  --primary-dark: #2563eb;
+  
+  /* 次要色 - 柔和的青色 */
+  --secondary-color: #06b6d4;
+  
+  /* 背景色 - 深灰蓝，更专业，层次分明 */
+  --bg-color: #0f172a;  /* 主背景 - 最深 */
+  --bg-secondary: #1e293b;  /* 侧栏背景 - 略亮 */
+  --card-bg: #1e293b;  /* 卡片背景 - 与侧栏一致 */
+  --sidebar-bg: #0f172a;  /* 侧栏专用背景 */
+  --header-bg: #1e293b;  /* 顶部栏背景 */
+  
+  /* 文字颜色 - 提高对比度 */
+  --text-color: #e2e8f0;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-tertiary: #64748b;  /* 更浅的次要文字，用于时间标签 */
+  
+  /* 边框颜色 - 更柔和的灰色 */
+  --border-color: #334155;  /* 更明显的边框 */
+  --border-subtle: #1e293b;  /* 微妙的分隔线 */
+  
+  /* 消息气泡 - 更专业的配色，对比度更高 */
+  --user-message: #2563eb;  /* 用户消息 - 蓝色，更明显 */
+  --bot-message: #334155;  /* AI消息 - 灰蓝色，略亮 */
+  
+  /* 危险色 - 柔和的红色 */
+  --danger-color: #ef4444;
+  
+  /* 悬停色 - 中性灰 */
+  --hover-color: #252d3d;
+  
+  /* 输入框颜色 */
+  --input-bg: #1a2332;
+  --input-border: #2d3748;
+  --input-focus-border: #3b82f6;
+  --input-text: #e2e8f0;
+  --input-placeholder: #64748b;
+  
+  /* 阴影 - 更柔和 */
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --radius: 8px;
+  
+  /* 输入框专用颜色 */
+  --input-box-bg: #1a2332;
+  --input-box-border: #2d3748;
+  --input-box-focus-border: #3b82f6;
+  
+  /* 代码块颜色 - 专业配色 */
+  --code-bg: rgba(59, 130, 246, 0.15);
+  --code-color: #60a5fa;
+  --code-block-bg: #0f1419;
+  --code-block-color: #cbd5e1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+  /* 启用硬件加速 */
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  min-height: 100vh;
+  /* 优化滚动性能 */
+  -webkit-overflow-scrolling: touch;
+  /* 减少重绘 */
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+button.primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+button.primary:hover {
+  background-color: var(--primary-dark);
+}
+
+button.secondary {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+button.secondary:hover {
+  background-color: #cbd5e1;
+}
+
+button.danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+button.danger:hover {
+  background-color: #dc2626;
+}
+
+input, textarea, select {
+  border: 1px solid var(--input-border, var(--border-color));
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  transition: all 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--input-focus-border, var(--primary-color));
+  background-color: var(--input-bg);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.error-message {
+  color: var(--danger-color);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: var(--radius);
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(79, 70, 229, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
