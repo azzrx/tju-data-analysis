@@ -19,7 +19,6 @@ LogOracle（日志神谕）是一个基于 RAG（检索增强生成）技术的�
 - Pinia (状态管理)
 - Axios (HTTP 客户端)
 - Marked (Markdown 渲染)
-
 ## 开发
 
 ```bash
@@ -28,7 +27,13 @@ npm run dev
 ```
 
 ## 构建
-
 ```bash
 npm run build
 ```
+
+##大模型
+需要自己拉取免费开源大模型一般在2g-8g左右
+如deepseek某些版本、gemini某些版本---
+
+##启动
+分别启动前端后端即可
